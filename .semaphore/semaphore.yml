@@ -52,5 +52,3 @@ after_pipeline:
       - name: Publish Results
         commands:
           - test-results gen-pipeline-report
-          - ls /tmp/
-          - ls /tmp/test-results
