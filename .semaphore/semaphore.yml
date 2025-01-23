@@ -46,10 +46,15 @@ blocks:
         always:
           commands:
             - test-results publish junit.xml
+  - name: 'Block #4'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - test-results gen-pipeline-report
+            - exit 1
 after_pipeline:
   task:
     jobs:
       - name: Publish Results
-        commands:
-          - test-results gen-pipeline-report
-          - 'semaphore/exit 1 '
+        commands: []
