@@ -52,4 +52,4 @@ after_pipeline:
       - name: Publish Results
         commands:
           - test-results gen-pipeline-report
-          - exit 1
+          - 'semaphore/exit 1 '
